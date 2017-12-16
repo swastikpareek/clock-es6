@@ -1,0 +1,96 @@
+html,
+body {
+  height: 100%;
+}
+
+.clock {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+}
+
+.clock-digital {
+  text-align: center;
+  font-size: 24px;
+  font-family: Roboto;
+}
+
+.clock-analogue {
+  border-radius: 100%;
+  position: relative;
+  width: 400px;
+  height: 400px;
+  margin: 10px auto;
+  border: 3px solid #888;
+  background: url(../img/clock.svg) center center;
+  background-size: cover;
+}
+
+.clock-analogue:after {
+  content: "";
+  position: absolute;
+  top: calc(50% - 10px);
+  left: calc(50% - 10px);
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  background: red;
+}
+
+.clock-secs-tick, .clock-min-tick, .clock-hour-tick {
+  position: absolute;
+  height: 7px;
+}
+
+.clock-hour-tick {
+  width: 30%;
+  height: 6px;
+  background: grey;
+  border-top-right-radius: 85%;
+  border-bottom-right-radius: 85%;
+  top: calc(50% - 3px);
+  left: 50%;
+  -webkit-transform: rotateZ(-90deg);
+  transform: rotateZ(-90deg);
+  -webkit-transform-origin-x: 0;
+}
+
+.clock-min-tick {
+  width: 40%;
+  height: 7px;
+  background: black;
+  border-top-right-radius: 85%;
+  border-bottom-right-radius: 85%;
+  top: calc(50% - 3.5px);
+  left: calc(50%);
+  -webkit-transform: rotateZ(-90deg);
+  transform: rotateZ(-90deg);
+  -webkit-transform-origin-x: 0;
+}
+
+.clock-secs-tick {
+  width: 45%;
+  height: 5px;
+  background: pink;
+  border-top-right-radius: 85%;
+  border-bottom-right-radius: 85%;
+  top: calc(50% - 2.5px);
+  left: calc(50%);
+  -webkit-transform: rotateZ(-90deg);
+  transform: rotateZ(-90deg);
+  -webkit-transform-origin-x: 0;
+}
+
+/*# sourceMappingURL=styles.css.map */

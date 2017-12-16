@@ -1,0 +1,1 @@
+export const compose = (...fns) => (args) => fns.reduce((composed, fn) => fn(composed), args);
